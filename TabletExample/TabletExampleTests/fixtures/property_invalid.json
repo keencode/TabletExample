@@ -1,0 +1,11 @@
+{
+  "query": {
+    "property": [
+      "7"
+    ],
+    "language": "en"
+  },
+  "request": {
+    "GET": "http://api.tablethotels.com/bear/property_info?property=7&language=en"
+  }
+}
