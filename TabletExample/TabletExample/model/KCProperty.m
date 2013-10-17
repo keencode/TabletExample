@@ -21,4 +21,10 @@
     return addressStr;
 }
 
+- (NSString *)cleanedHotelContent
+{
+    NSString *str = [self.hotelContent stringByReplacingOccurrencesOfString:@"\r\\n\r\\n" withString:@"\n\n"];
+    return str;
+}
+
 @end

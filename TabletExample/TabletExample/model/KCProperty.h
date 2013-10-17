@@ -20,5 +20,6 @@
 @property (nonatomic, strong) NSArray *images;
 
 - (NSString *)formattedAddressString;
+- (NSString *)cleanedHotelContent;
 
 @end

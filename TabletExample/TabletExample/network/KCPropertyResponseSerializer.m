@@ -60,7 +60,6 @@
     NSMutableArray *address = [NSMutableArray arrayWithCapacity:[json count]];
     
     for (NSString *addressLine in json) {
-        NSLog(@"addressLine: %@", addressLine);
         [address addObject:addressLine];
     }
     
