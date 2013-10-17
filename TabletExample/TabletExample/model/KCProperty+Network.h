@@ -14,4 +14,6 @@
                       onSuccess:(void (^)(NSArray *properties))successBlock
                       onFailure:(void (^)(NSError *error))failureBlock;
 
++ (NSURL *)requestURLWithIDs:(NSArray *)ids;
+
 @end

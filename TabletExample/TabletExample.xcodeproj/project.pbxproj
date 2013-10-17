@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2ED7BC7159CF44D0BADEFB67 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EEA936043A4921BC7E23E3 /* libPods.a */; };
+		B81B89CB18104DEA00DDB9F3 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B81B89C918104DEA00DDB9F3 /* Main_iPad.storyboard */; };
+		B81B89CE18104E9000DDB9F3 /* KCPropertyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81B89CD18104E9000DDB9F3 /* KCPropertyCollectionViewController.m */; };
+		B81B89D118104FD900DDB9F3 /* KCPropertyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B81B89D018104FD900DDB9F3 /* KCPropertyCollectionViewCell.m */; };
+		B81B89D31810522400DDB9F3 /* PropertyNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B81B89D21810522400DDB9F3 /* PropertyNetworkTests.m */; };
+		B81B89D51810600000DDB9F3 /* KCPropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B81B89D41810600000DDB9F3 /* KCPropertyTests.m */; };
+		B81B89D71810696300DDB9F3 /* property.json in Resources */ = {isa = PBXBuildFile; fileRef = B8C1D1D6180F5ACD00E9CA69 /* property.json */; };
 		B842D383180F7754009E6DF2 /* KCImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B842D382180F7754009E6DF2 /* KCImageInfo.m */; };
 		B842D388180F9613009E6DF2 /* KCPropertyResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = B842D387180F9613009E6DF2 /* KCPropertyResponseSerializer.m */; };
 		B842D38B180F9BAD009E6DF2 /* PropertyResponseSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B842D38A180F9BAD009E6DF2 /* PropertyResponseSerializerTests.m */; };
@@ -17,7 +23,6 @@
 		B8C1D198180F4DEC00E9CA69 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B8C1D196180F4DEC00E9CA69 /* InfoPlist.strings */; };
 		B8C1D19A180F4DEC00E9CA69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C1D199180F4DEC00E9CA69 /* main.m */; };
 		B8C1D19E180F4DEC00E9CA69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C1D19D180F4DEC00E9CA69 /* AppDelegate.m */; };
-		B8C1D1A1180F4DEC00E9CA69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C1D19F180F4DEC00E9CA69 /* Main.storyboard */; };
 		B8C1D1A6180F4DEC00E9CA69 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8C1D1A5180F4DEC00E9CA69 /* Images.xcassets */; };
 		B8C1D1AD180F4DEC00E9CA69 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C1D1AC180F4DEC00E9CA69 /* XCTest.framework */; };
 		B8C1D1AE180F4DEC00E9CA69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C1D18D180F4DEC00E9CA69 /* Foundation.framework */; };
@@ -28,9 +33,6 @@
 		B8C1D1D7180F5ACD00E9CA69 /* FixtureHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C1D1D5180F5ACD00E9CA69 /* FixtureHelper.m */; };
 		B8C1D1D8180F5ACD00E9CA69 /* property.json in Resources */ = {isa = PBXBuildFile; fileRef = B8C1D1D6180F5ACD00E9CA69 /* property.json */; };
 		B8C1D1DA180F5C8A00E9CA69 /* property_invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = B8C1D1D9180F5C8A00E9CA69 /* property_invalid.json */; };
-		B8C1D1DD180F710900E9CA69 /* KCPropertyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C1D1DC180F710900E9CA69 /* KCPropertyListViewController.m */; };
-		B8C1D1E0180F71F300E9CA69 /* KCPropertyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C1D1DF180F71F300E9CA69 /* KCPropertyTableViewCell.m */; };
-		B8C1D1E2180F729A00E9CA69 /* property.json in Resources */ = {isa = PBXBuildFile; fileRef = B8C1D1E1180F729A00E9CA69 /* property.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,13 @@
 /* Begin PBXFileReference section */
 		03EEA936043A4921BC7E23E3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5636EA03B7B34BE791551101 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		B81B89CA18104DEA00DDB9F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		B81B89CC18104E9000DDB9F3 /* KCPropertyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCPropertyCollectionViewController.h; path = views/KCPropertyCollectionViewController.h; sourceTree = "<group>"; };
+		B81B89CD18104E9000DDB9F3 /* KCPropertyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCPropertyCollectionViewController.m; path = views/KCPropertyCollectionViewController.m; sourceTree = "<group>"; };
+		B81B89CF18104FD900DDB9F3 /* KCPropertyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCPropertyCollectionViewCell.h; path = views/KCPropertyCollectionViewCell.h; sourceTree = "<group>"; };
+		B81B89D018104FD900DDB9F3 /* KCPropertyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCPropertyCollectionViewCell.m; path = views/KCPropertyCollectionViewCell.m; sourceTree = "<group>"; };
+		B81B89D21810522400DDB9F3 /* PropertyNetworkTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyNetworkTests.m; sourceTree = "<group>"; };
+		B81B89D41810600000DDB9F3 /* KCPropertyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCPropertyTests.m; sourceTree = "<group>"; };
 		B842D381180F7754009E6DF2 /* KCImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCImageInfo.h; path = model/KCImageInfo.h; sourceTree = "<group>"; };
 		B842D382180F7754009E6DF2 /* KCImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCImageInfo.m; path = model/KCImageInfo.m; sourceTree = "<group>"; };
 		B842D386180F9613009E6DF2 /* KCPropertyResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCPropertyResponseSerializer.h; path = network/KCPropertyResponseSerializer.h; sourceTree = "<group>"; };
@@ -61,7 +70,6 @@
 		B8C1D19B180F4DEC00E9CA69 /* TabletExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TabletExample-Prefix.pch"; sourceTree = "<group>"; };
 		B8C1D19C180F4DEC00E9CA69 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8C1D19D180F4DEC00E9CA69 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B8C1D1A0180F4DEC00E9CA69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8C1D1A5180F4DEC00E9CA69 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B8C1D1AB180F4DEC00E9CA69 /* TabletExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabletExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C1D1AC180F4DEC00E9CA69 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -75,11 +83,6 @@
 		B8C1D1D5180F5ACD00E9CA69 /* FixtureHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixtureHelper.m; sourceTree = "<group>"; };
 		B8C1D1D6180F5ACD00E9CA69 /* property.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = property.json; sourceTree = "<group>"; };
 		B8C1D1D9180F5C8A00E9CA69 /* property_invalid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = property_invalid.json; sourceTree = "<group>"; };
-		B8C1D1DB180F710900E9CA69 /* KCPropertyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCPropertyListViewController.h; path = views/KCPropertyListViewController.h; sourceTree = "<group>"; };
-		B8C1D1DC180F710900E9CA69 /* KCPropertyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCPropertyListViewController.m; path = views/KCPropertyListViewController.m; sourceTree = "<group>"; };
-		B8C1D1DE180F71F300E9CA69 /* KCPropertyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCPropertyTableViewCell.h; path = views/KCPropertyTableViewCell.h; sourceTree = "<group>"; };
-		B8C1D1DF180F71F300E9CA69 /* KCPropertyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCPropertyTableViewCell.m; path = views/KCPropertyTableViewCell.m; sourceTree = "<group>"; };
-		B8C1D1E1180F729A00E9CA69 /* property.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = property.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 		B842D389180F961A009E6DF2 /* network */ = {
 			isa = PBXGroup;
 			children = (
+				B8C1D1C7180F523500E9CA69 /* KCProperty+Network.h */,
+				B8C1D1C8180F523500E9CA69 /* KCProperty+Network.m */,
 				B842D386180F9613009E6DF2 /* KCPropertyResponseSerializer.h */,
 				B842D387180F9613009E6DF2 /* KCPropertyResponseSerializer.m */,
 			);
@@ -165,7 +170,6 @@
 		B8C1D194180F4DEC00E9CA69 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B8C1D1E1180F729A00E9CA69 /* property.json */,
 				B8C1D195180F4DEC00E9CA69 /* TabletExample-Info.plist */,
 				B8C1D196180F4DEC00E9CA69 /* InfoPlist.strings */,
 				B8C1D199180F4DEC00E9CA69 /* main.m */,
@@ -177,6 +181,8 @@
 		B8C1D1B2180F4DEC00E9CA69 /* TabletExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				B81B89D41810600000DDB9F3 /* KCPropertyTests.m */,
+				B81B89D21810522400DDB9F3 /* PropertyNetworkTests.m */,
 				B842D38A180F9BAD009E6DF2 /* PropertyResponseSerializerTests.m */,
 				B8C1D1D3180F5ACD00E9CA69 /* fixtures */,
 				B8C1D1B3180F4DEC00E9CA69 /* Supporting Files */,
@@ -198,8 +204,6 @@
 			children = (
 				B8C1D1C4180F4FF500E9CA69 /* KCProperty.h */,
 				B8C1D1C5180F4FF500E9CA69 /* KCProperty.m */,
-				B8C1D1C7180F523500E9CA69 /* KCProperty+Network.h */,
-				B8C1D1C8180F523500E9CA69 /* KCProperty+Network.m */,
 				B842D381180F7754009E6DF2 /* KCImageInfo.h */,
 				B842D382180F7754009E6DF2 /* KCImageInfo.m */,
 			);
@@ -209,11 +213,11 @@
 		B8C1D1C3180F4FAA00E9CA69 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				B8C1D19F180F4DEC00E9CA69 /* Main.storyboard */,
-				B8C1D1DB180F710900E9CA69 /* KCPropertyListViewController.h */,
-				B8C1D1DC180F710900E9CA69 /* KCPropertyListViewController.m */,
-				B8C1D1DE180F71F300E9CA69 /* KCPropertyTableViewCell.h */,
-				B8C1D1DF180F71F300E9CA69 /* KCPropertyTableViewCell.m */,
+				B81B89C918104DEA00DDB9F3 /* Main_iPad.storyboard */,
+				B81B89CC18104E9000DDB9F3 /* KCPropertyCollectionViewController.h */,
+				B81B89CD18104E9000DDB9F3 /* KCPropertyCollectionViewController.m */,
+				B81B89CF18104FD900DDB9F3 /* KCPropertyCollectionViewCell.h */,
+				B81B89D018104FD900DDB9F3 /* KCPropertyCollectionViewCell.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -307,10 +311,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B81B89D71810696300DDB9F3 /* property.json in Resources */,
 				B8C1D1A6180F4DEC00E9CA69 /* Images.xcassets in Resources */,
+				B81B89CB18104DEA00DDB9F3 /* Main_iPad.storyboard in Resources */,
 				B8C1D198180F4DEC00E9CA69 /* InfoPlist.strings in Resources */,
-				B8C1D1E2180F729A00E9CA69 /* property.json in Resources */,
-				B8C1D1A1180F4DEC00E9CA69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,14 +368,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B81B89CE18104E9000DDB9F3 /* KCPropertyCollectionViewController.m in Sources */,
 				B8C1D19E180F4DEC00E9CA69 /* AppDelegate.m in Sources */,
 				B842D383180F7754009E6DF2 /* KCImageInfo.m in Sources */,
 				B8C1D1C9180F523500E9CA69 /* KCProperty+Network.m in Sources */,
-				B8C1D1DD180F710900E9CA69 /* KCPropertyListViewController.m in Sources */,
+				B81B89D118104FD900DDB9F3 /* KCPropertyCollectionViewCell.m in Sources */,
 				B8C1D1C6180F4FF500E9CA69 /* KCProperty.m in Sources */,
 				B842D388180F9613009E6DF2 /* KCPropertyResponseSerializer.m in Sources */,
 				B8C1D19A180F4DEC00E9CA69 /* main.m in Sources */,
-				B8C1D1E0180F71F300E9CA69 /* KCPropertyTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +384,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B842D38B180F9BAD009E6DF2 /* PropertyResponseSerializerTests.m in Sources */,
+				B81B89D31810522400DDB9F3 /* PropertyNetworkTests.m in Sources */,
+				B81B89D51810600000DDB9F3 /* KCPropertyTests.m in Sources */,
 				B8C1D1D7180F5ACD00E9CA69 /* FixtureHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,20 +401,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		B81B89C918104DEA00DDB9F3 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B81B89CA18104DEA00DDB9F3 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
 		B8C1D196180F4DEC00E9CA69 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B8C1D197180F4DEC00E9CA69 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		B8C1D19F180F4DEC00E9CA69 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B8C1D1A0180F4DEC00E9CA69 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		B8C1D1B5180F4DEC00E9CA69 /* InfoPlist.strings */ = {
@@ -458,6 +464,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -490,6 +497,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

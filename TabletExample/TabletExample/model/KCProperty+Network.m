@@ -11,6 +11,8 @@
 #import "AFHTTPRequestOperation.h"
 #import "KCPropertyResponseSerializer.h"
 
+#define kBaseURLStr @"http://api.tablethotels.com/bear/property_info?"
+
 static NSString * const BaseURLString = @"http://api.tablethotels.com";
 
 @implementation KCProperty (Network)
@@ -19,7 +21,7 @@ static NSString * const BaseURLString = @"http://api.tablethotels.com";
                       onSuccess:(void (^)(NSArray *properties))successBlock
                       onFailure:(void (^)(NSError *error))failureBlock;
 {
-    NSURL *url = [NSURL URLWithString:@"http://api.tablethotels.com/bear/property_info?property=7&language=en"];
+    NSURL *url = [KCProperty requestURLWithIDs:ids];
     NSURLRequest * request = [NSURLRequest requestWithURL:url];
     
     AFHTTPRequestOperation * operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
@@ -30,13 +32,23 @@ static NSString * const BaseURLString = @"http://api.tablethotels.com";
         successBlock(properties);
     }
     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%@", error.localizedDescription);
         failureBlock(error);
     }];
     
     [operation start];
 }
 
-
++ (NSURL *)requestURLWithIDs:(NSArray *)ids;
+{
+    NSMutableString *urlStr = [NSMutableString stringWithFormat:@"%@", kBaseURLStr];
+    
+    for (NSNumber *idNum in ids) {
+        [urlStr appendString:[NSString stringWithFormat:@"property=%@&", idNum]];
+    }
+    
+    [urlStr appendString:@"language=en"];
+    
+    return [NSURL URLWithString:urlStr];
+}
 
 @end

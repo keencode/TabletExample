@@ -19,4 +19,6 @@
 @property (nonatomic, strong) NSNumber *meterScore;
 @property (nonatomic, strong) NSArray *images;
 
+- (NSString *)formattedAddressString;
+
 @end

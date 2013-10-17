@@ -42,26 +42,51 @@
 
 #pragma mark - isValidJSON
 
-//- (void)testIsValidJSONShouldReturnTrueForValidData
-//{
-//    NSData *data = [fixtureHelper validDataFromFixture];
-//    id json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves
-//                                                error:nil];
-//    
-//    BOOL isValidJSON = [KCProperty isValidJSON:json];
-//    
-//    XCTAssertTrue(isValidJSON, @"isValidJSON should be true");
-//}
-//
-//- (void)testIsValidJSONShouldReturnFalseForInvalidData
-//{
-//    NSData *data = [fixtureHelper invalidDataFromFixture];
-//    id json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves
-//                                                error:nil];
-//    
-//    BOOL isValidJSON = [KCProperty isValidJSON:json];
-//    
-//    XCTAssertFalse(isValidJSON, @"isValidJSON should be false");
-//}
+- (void)testRequestURLWithIDsShouldReturnANonNilObject
+{
+    NSArray *ids = @[@5, @25];
+    
+    id urlWithIDs = [KCProperty requestURLWithIDs:ids];
+    
+    XCTAssertNotNil(urlWithIDs, @"urlWithIDs should NOT be nil");
+}
+
+- (void)testRequestURLWithIDsShouldReturnAnNSURL
+{
+    NSArray *ids = @[@5, @25];
+    
+    id urlWithIDs = [KCProperty requestURLWithIDs:ids];
+    
+    XCTAssertTrue([urlWithIDs isKindOfClass:[NSURL class]], @"urlWithIDs should be an NSURL");
+}
+
+- (void)testRequestURLWithIDsShouldContainTheCorrectNumberOfPropertyIDs
+{
+    NSArray *ids = @[@5, @25];
+    NSUInteger expectedPropertyCount = [ids count];
+    
+    NSURL *urlWithIDs = [KCProperty requestURLWithIDs:ids];
+    NSString *urlStr = [urlWithIDs absoluteString];
+    
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"property="
+                                                                           options:NSRegularExpressionCaseInsensitive error:&error];
+    NSUInteger numberOfMatches = [regex numberOfMatchesInString:urlStr
+                                                        options:0
+                                                          range:NSMakeRange(0, [urlStr length])];
+    
+    XCTAssertEqual(numberOfMatches, expectedPropertyCount, @"numberOfMatches should equal expectedPropertyCount");
+}
+
+- (void)testRequestURLWithIDsShouldReturnURLStringMatchingExpectedString
+{
+    NSArray *ids = @[@5, @25];
+    NSString *expectedURLStr = @"http://api.tablethotels.com/bear/property_info?property=5&property=25&language=en";
+    
+    NSURL *urlWithIDs = [KCProperty requestURLWithIDs:ids];
+    NSString *urlStr = [urlWithIDs absoluteString];
+    
+    XCTAssertEqualObjects(urlStr, expectedURLStr, @"urlStr should match expectedURLStr");
+}
 
 @end

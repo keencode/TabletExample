@@ -10,4 +10,15 @@
 
 @implementation KCProperty
 
+- (NSString *)formattedAddressString
+{
+    NSMutableString *addressStr = [NSMutableString stringWithString:@""];
+    
+    for (NSString *str in self.address) {
+        [addressStr appendFormat:@"%@\n", str];
+    }
+    
+    return addressStr;
+}
+
 @end

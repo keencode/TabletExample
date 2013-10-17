@@ -17,17 +17,6 @@
     return properties;
 }
 
-//+ (BOOL)isValidJSON:(id)json
-//{
-//    if ([json isKindOfClass:[NSDictionary class]]) {
-//        if ([json objectForKey:@"response"]) {
-//            return YES;
-//        }
-//    }
-//    
-//    return NO;
-//}
-
 - (NSArray *)propertyIDsFromJSON:(NSDictionary *)json
 {
     return [[json objectForKey:@"query"] objectForKey:@"property"];
@@ -71,6 +60,7 @@
     NSMutableArray *address = [NSMutableArray arrayWithCapacity:[json count]];
     
     for (NSString *addressLine in json) {
+        NSLog(@"addressLine: %@", addressLine);
         [address addObject:addressLine];
     }
     

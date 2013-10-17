@@ -142,6 +142,20 @@
     XCTAssertEqualObjects(property.address, expectedAddress, @"property.address should match expectedAddress");
 }
 
+- (void)testUpdateWithInfoShouldAssignTheAddressWithTheCorrectCount
+{
+    NSArray *idsFromJSON = [responseSerializer propertyIDsFromJSON:responseJSON];
+    NSUInteger propertyIndex = 0;
+    NSString *propertyID = [idsFromJSON objectAtIndex:propertyIndex];
+    NSDictionary *propertyInfo = [[responseJSON objectForKey:@"response"] objectForKey:propertyID];
+    NSArray *expectedAddress = [propertyInfo objectForKey:@"address"];
+    
+    KCProperty *property = [[KCProperty alloc] init];
+    [responseSerializer updateProperty:property withInfo:propertyInfo];
+    
+    XCTAssertEqualObjects(property.address, expectedAddress, @"property.address should match expectedAddress");
+}
+
 - (void)testUpdateWithInfoShouldAssignTheCorrectHotelContent
 {
     NSArray *idsFromJSON = [responseSerializer propertyIDsFromJSON:responseJSON];
@@ -199,6 +213,48 @@
     XCTAssertEqual([property.images count], expectedImagesCount, @"images count should equal expectedImagesCount");
 }
 
+#pragma mark - addressFromJSON
+
+- (void)testAddressFromJSONShouldReturnANonNilObject
+{
+    NSArray *idsFromJSON = [responseSerializer propertyIDsFromJSON:responseJSON];
+    NSUInteger propertyIndex = 0;
+    NSString *propertyID = [idsFromJSON objectAtIndex:propertyIndex];
+    NSDictionary *propertyInfo = [[responseJSON objectForKey:@"response"] objectForKey:propertyID];
+    NSArray *addressJSON = [propertyInfo objectForKey:@"address"];
+    
+    id address = [responseSerializer addressFromJSON:addressJSON];
+    
+    XCTAssertNotNil(address, @"address should NOT be nil");
+}
+
+- (void)testAddressFromJSONShouldReturnAnArray
+{
+    NSArray *idsFromJSON = [responseSerializer propertyIDsFromJSON:responseJSON];
+    NSUInteger propertyIndex = 0;
+    NSString *propertyID = [idsFromJSON objectAtIndex:propertyIndex];
+    NSDictionary *propertyInfo = [[responseJSON objectForKey:@"response"] objectForKey:propertyID];
+    NSArray *addressJSON = [propertyInfo objectForKey:@"address"];
+    
+    id address = [responseSerializer addressFromJSON:addressJSON];
+    
+    XCTAssertTrue([address isKindOfClass:[NSArray class]], @"address should be a NSArray");
+}
+
+- (void)testAddressFromJSONShouldReturnCorrectCount
+{
+    NSArray *idsFromJSON = [responseSerializer propertyIDsFromJSON:responseJSON];
+    NSUInteger propertyIndex = 0;
+    NSString *propertyID = [idsFromJSON objectAtIndex:propertyIndex];
+    NSDictionary *propertyInfo = [[responseJSON objectForKey:@"response"] objectForKey:propertyID];
+    NSArray *addressJSON = [propertyInfo objectForKey:@"address"];
+    NSUInteger expectedCount = [addressJSON count];
+    
+    NSArray *address = [responseSerializer addressFromJSON:addressJSON];
+    
+    XCTAssertEqual([address count], expectedCount, @"address count should be equal to expectedCount");
+}
+
 #pragma mark - imageInfosFromJSON
 
 - (void)testImageInfosFromJSONShouldReturnANonNilObject
@@ -209,7 +265,7 @@
     NSDictionary *propertyInfo = [[responseJSON objectForKey:@"response"] objectForKey:propertyID];
     NSArray *imagesJSON = [propertyInfo objectForKey:@"images"];
     
-    id images = [responseSerializer imageInfosFromJSON:imagesJSON];
+    id images = [responseSerializer addressFromJSON:imagesJSON];
     
     XCTAssertNotNil(images, @"images should NOT be nil");
 }

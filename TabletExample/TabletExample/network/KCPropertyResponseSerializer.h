@@ -12,8 +12,6 @@
 
 @interface KCPropertyResponseSerializer : AFJSONResponseSerializer
 
-//+ (BOOL)isValidJSON:(id)json;
-
 - (NSArray *)propertyIDsFromJSON:(NSDictionary *)json;
 
 - (NSArray *)parsePropertyJSON:(NSDictionary *)json;
